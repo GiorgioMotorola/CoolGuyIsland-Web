@@ -16,7 +16,7 @@ body {
   justify-content: space-between;
   align-items: center;
   font-size: 20px;
-  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 .nav-list {
@@ -35,6 +35,13 @@ body {
 
 .navbar a:hover {
   color: aliceblue;
+}
+
+#address  {
+  font-family: 'Roboto', sans-serif, !important; 
+  font-size: 16px;
+  margin-left: -1300px;
+  margin-top: 5px;
 }
 
 .icon {
@@ -56,7 +63,7 @@ body {
 .card-one > h3 {
   
   max-width: 950px;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 100;
   font-size: smaller;
   text-align: center;
@@ -74,7 +81,7 @@ body {
 
 .card-two > h3 {
   max-width: 950px;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 100;
   font-size: smaller;
   text-align: center;
@@ -92,43 +99,38 @@ body {
   margin-bottom: 50px;
 }
 
-button {
+.interests > button {
   border-radius: 50%;
   width: 200px;
   height: 200px;
   background-color: rgb(6, 122, 129);
   border: white;
   text-decoration: none;
-  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-family: 'Roboto', sans-serif;
   font-size: xx-large;
   color: white;
-
-  /* animation: slide-in-left 0.5s ease;
-  animation-fill-mode: both;
-  animation-delay: 0.3s;
-  animation-iteration-count: 1; */
 }
 
 @keyframes button {
   15% {
-      -webkit-transform: translateY(5px);
-      transform: translateY(5px);
+      -webkit-transform: translateY(0px);
+      transform: translateY(0px);
   }
   30% {
-      -webkit-transform: translateY(-5px);
-      transform: translateY(-5px);
+      -webkit-transform: translateY(-10px);
+      transform: translateY(-10px);
   }
   50% {
-      -webkit-transform: translateY(3px);
-      transform: translateY(3px);
+      -webkit-transform: translateY(-10px);
+      transform: translateY(-10px);
   }
   65% {
-      -webkit-transform: translateY(-3px);
-      transform: translateY(-3px);
+      -webkit-transform: translateY(-10px);
+      transform: translateY(-10px);
   }
   80% {
-      -webkit-transform: translateY(2px);
-      transform: translateY(2px);
+      -webkit-transform: translateY(-7px);
+      transform: translateY(7px);
   }
   100% {
       -webkit-transform: translateY(0);
@@ -137,17 +139,6 @@ button {
 
 }
 
-/* @keyframes slide-in-left {
-  from {
-      transform: translateX(-100%);
-      opacity: 0;
-  }
-
-  to {
-      transform: translateX(0);
-      opacity: 1;
-  }
-} */
 
 button:hover {
   color: rgba(255, 255, 255, 1);
@@ -188,42 +179,41 @@ button:hover {
   cursor: pointer;
 }
 
-.container {
-  width: 100%;
+.see-review {
+  margin-top: 100px;
+  margin-left: 900px;
+  text-decoration: none;
+  margin-bottom: 100px;
+}
+
+.see-review > button {
+  height: 50px;
+  width: 150px;
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  background-color: #35608e;
+  border-radius: 10px;
+  color: whitesmoke;
+}
+
+.see-review > button:hover {
+  background-color: #434a53;
+}
+
+.review {
   display: flex;
-  box-sizing: border-box;
-  flex-direction: row;
-  gap: 50px;
-}
-
-.left, .middle, .middleTwo, .right {
-  flex: 1;
-  border-style: none;
-  padding: 30px;
-  font-size: 12px;
+  flex-direction: column; 
+  align-items: center;
+  padding-top: 30px;
+  padding-left: 300px;
+  padding-right: 300px;
+  margin-left: 300px;
+  margin-right: 300px;
   font-family: 'Roboto', sans-serif;
-  box-shadow: 0px 0px 2.5px 2.5px;
-  border-radius: 13px;
-  margin-left: 10px;
-  margin-right: 10px;
-  
-}
-
-.left, .middle, .middleTwo, .right > h1 {
-  text-align: center;
-}
-
-.img-1, .img-2, .img-3, .img-4 {
-  box-shadow: 1px 1px 1px 1px;
-  margin-bottom: 9px;
-}
-
-.left:hover,
-.middle:hover,
-.middleTwo:hover,
-.right:hover {
-  background-color: rgb(218, 215, 215);
-  transition: .2s;
+  background-color: #efefef;
+  margin-bottom: 100px;
+  font-size: smaller;
 }
 
 .footer {
@@ -253,9 +243,6 @@ button:hover {
 }
 
 @media screen and (max-width: 768px) {
-  .container {
-    flex-direction: column;
-  }
 
   .main-image {
     flex-direction: column;
@@ -309,6 +296,16 @@ button:hover {
     display: block;
     
   }
+
+  .see-review {
+    display: none;
+  }
+
+  .review {
+    display: none;
+  }
+
+
 }
 
 @media screen and (max-width: 1700px) {
